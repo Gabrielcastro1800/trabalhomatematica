@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    fatorial:<input type="number" id="fatorial"> <button onclick="calculafatorial(1)">calcular</button>
+    <p id="resposta1">resposta:</p>
+
+
+    permutação simples: P: <input type="number" id="psimples1">N:
+
+    <script>
+        function calculafatorial(key){
+            if(key == 1){
+                let fac = document.getElementById("fatorial").value
+                let fac2 = fac
+                if(fac == 0){
+                    document.getElementById("resposta1").innerHTML = "resposta:"
+                    document.getElementById("resposta1").innerHTML += 0
+                }else{
+                while(fac > 1){
+                    fac-=1
+                    fac2 = fac2*fac
+                }
+                if(fac <= 1)
+                {
+                    document.getElementById("resposta1").innerHTML = "resposta:"
+                    document.getElementById("resposta1").innerHTML += fac2
+                }
+            }
+            }
+        }
+    </script>
+</body>
+</html>
